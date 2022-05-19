@@ -6,10 +6,15 @@ const INITIAL_STATE = {
 
 const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case 'CHANGE_WALLET':
+  case 'CHANGE_CURRENCIES':
     return { ...state,
-      currencies: [state.currencies, action.payload],
-      expenses: [state.expenses, action.payload] };
+      currencies: Object.keys(action.payload).filter((curr) => curr !== 'USDT'),
+    };
+  case 'CHANGE_EXPENSES':
+    return {
+      ...state,
+      expenses: action.payload,
+    };
   default:
     return state;
   }
