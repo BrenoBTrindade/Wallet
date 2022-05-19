@@ -1,0 +1,12 @@
+.header-form {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  width: 90%;
+}
+
+.info-header {
+  display: flex;
+  flex-direction: row;
+  margin-top: -20px;
+}

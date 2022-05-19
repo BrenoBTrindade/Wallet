@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getCurrencies, getCurrencyExp } from '../actions';
 import Header from '../component/Header';
+import './Wallet.css';
 
 class Wallet extends React.Component {
   constructor() {
@@ -46,10 +47,13 @@ class Wallet extends React.Component {
 
     return (
       <main>
-        <Header />
-        <form>
+        <div className="header">
+          <Header />
+        </div>
+        <form className="form-wallet">
           <label htmlFor="value">
             Valor:
+            {' '}
             <input
               type="number"
               id="value"
@@ -61,6 +65,7 @@ class Wallet extends React.Component {
           </label>
           <label htmlFor="curr">
             Moeda
+            {' '}
             <select
               id="curr"
               name="currency"
@@ -78,6 +83,7 @@ class Wallet extends React.Component {
           </label>
           <label htmlFor="method">
             Método de pagamento
+            {' '}
             <select
               id="method"
               data-testid="method-input"
@@ -126,19 +132,21 @@ class Wallet extends React.Component {
             Adicionar despesa
           </button>
         </form>
-        <table>
-          <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
-          </tr>
-        </table>
+        <div className="table-wallet">
+          <table className="table">
+            <tr>
+              <th>Descrição</th>
+              <th>Tag</th>
+              <th>Método de pagamento</th>
+              <th>Valor</th>
+              <th>Moeda</th>
+              <th>Câmbio utilizado</th>
+              <th>Valor convertido</th>
+              <th>Moeda de conversão</th>
+              <th>Editar/Excluir</th>
+            </tr>
+          </table>
+        </div>
       </main>
     );
   }

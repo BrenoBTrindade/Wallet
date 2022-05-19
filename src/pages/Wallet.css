@@ -1,0 +1,60 @@
+.header {
+  background-color: white;
+  border: solid black 2px;
+  display: flex;
+  height: 80px;
+  width: 100%;
+}
+
+.form-wallet {
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 30px;
+  width: 70%;
+}
+
+.form-wallet input , select {
+  border: 1px solid rgb(123, 123, 123);
+  border-radius: 4px;
+  padding: 5px;
+  resize: vertical;
+}
+
+.form-wallet button {
+  background-color: #181a18;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
+.form-wallet button:hover {
+  background-color: #555;
+  color: white;
+}
+
+.table-wallet {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 10px;
+  width: 72%;
+}
+
+.table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
