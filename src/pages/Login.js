@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import changeEmail from '../actions';
+import './Login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -38,36 +39,42 @@ class Login extends React.Component {
   render() {
     const { email, password, disabled } = this.state;
     return (
-      <main>
-        <label htmlFor="email">
-          Email:
-          <input
-            id="email"
-            type="email"
-            name="email"
-            value={ email }
-            onChange={ this.handleChange }
-            data-testid="email-input"
-          />
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            id="password"
-            type="password"
-            name="password"
-            value={ password }
-            onChange={ this.handleChange }
-            data-testid="password-input"
-          />
-        </label>
-        <button
-          type="submit"
-          disabled={ disabled }
-          onClick={ this.onButtonClick }
-        >
-          Entrar
-        </button>
+      <main className="login-main">
+        <div className="login">
+          <h2>My Wallet</h2>
+          <div className="input-login">
+            <label htmlFor="email">
+              Email:
+              <input
+                id="email"
+                type="email"
+                name="email"
+                value={ email }
+                onChange={ this.handleChange }
+                data-testid="email-input"
+              />
+            </label>
+            <label htmlFor="password">
+              Senha:
+              <input
+                id="password"
+                type="password"
+                name="password"
+                value={ password }
+                onChange={ this.handleChange }
+                data-testid="password-input"
+              />
+            </label>
+          </div>
+
+          <button
+            type="submit"
+            disabled={ disabled }
+            onClick={ this.onButtonClick }
+          >
+            Entrar
+          </button>
+        </div>
       </main>
     );
   }
