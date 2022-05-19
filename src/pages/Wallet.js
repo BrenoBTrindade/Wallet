@@ -31,6 +31,7 @@ class Wallet extends React.Component {
     const {
       currencies,
       getCurrency,
+      expenses,
     } = this.props;
     const {
       value,
@@ -145,6 +146,21 @@ class Wallet extends React.Component {
               <th>Moeda de conversão</th>
               <th>Editar/Excluir</th>
             </tr>
+            {expenses.map((expense) => (
+              <tr key={ expense.id }>
+                <td>{ expense.description }</td>
+                <td>{ expense.tag }</td>
+                <td>{ expense.method }</td>
+                <td>{ Number(expense.value).toFixed(2) }</td>
+                <td>{ expense.exchangeRates[expense.currency].name }</td>
+                <td>{ Number(expense.exchangeRates[expense.currency].ask).toFixed(2) }</td>
+                <td>
+                  { (Number(expense.value)
+              * Number(expense.exchangeRates[expense.currency].ask)).toFixed(2) }
+                </td>
+                <td>Real</td>
+              </tr>
+            ))}
           </table>
         </div>
       </main>
@@ -166,6 +182,7 @@ const mapDispatchToProps = (dispatch) => ({
 Wallet.propTypes = {
   fetchCurr: PropTypes.func.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.any).isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.any).isRequired,
   getCurrency: PropTypes.func.isRequired,
 };
 
