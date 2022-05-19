@@ -10,7 +10,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { email } = this.props;
+    const { email, currencies } = this.props;
     return (
       <main>
         <header>
@@ -21,6 +21,56 @@ class Wallet extends React.Component {
           <p data-testid="total-field">0</p>
           <p data-testid="header-currency-field">BRL</p>
         </header>
+        <form>
+          <label htmlFor="valuer">
+            Valor:
+            <input
+              type="number"
+              id="value"
+              data-testid="value-input"
+            />
+          </label>
+          <label htmlFor="curr">
+            Moeda
+            <select id="curr">
+              {currencies.map((currency, i) => (
+                <option
+                  key={ i }
+                >
+                  {currency}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label htmlFor="method">
+            Método de pagamento
+            <select
+              id="method"
+              data-testid="method-input"
+            >
+              <option>Dinheiro</option>
+              <option>Cartão de crédito</option>
+              <option>Cartão de débito</option>
+            </select>
+          </label>
+          <label htmlFor="tag">
+            <select
+              data-testid="tag-input"
+              id="tag"
+            >
+              <option>Alimentação</option>
+              <option>Lazer</option>
+              <option>Trabalho</option>
+              <option>Transporte</option>
+              <option>Saúde</option>
+            </select>
+          </label>
+          <input
+            type="text"
+            data-testid="description-input"
+            placeholder="Descrição"
+          />
+        </form>
       </main>
     );
   }
@@ -28,6 +78,7 @@ class Wallet extends React.Component {
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
+  currencies: state.wallet.currencies,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -37,6 +88,7 @@ const mapDispatchToProps = (dispatch) => ({
 Wallet.propTypes = {
   email: PropTypes.string.isRequired,
   fetchCurr: PropTypes.func.isRequired,
+  currencies: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
