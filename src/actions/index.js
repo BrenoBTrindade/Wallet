@@ -9,6 +9,10 @@ export const changeExpenses = (payload) => ({
   type: 'CHANGE_EXPENSES', payload,
 });
 
+export const removeTable = (id) => ({
+  type: 'REMOVE_TABLE', id,
+});
+
 export function getCurrencies() {
   return async (dispatch) => {
     try {

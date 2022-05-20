@@ -15,10 +15,11 @@ class Header extends Component {
 
     return (
       <header className="header-form">
-        <div>
+        <div className="title">
           <h1>
             MyWallet
           </h1>
+          <img src="https://png.pngtree.com/png-clipart/20190619/original/pngtree-vector-wallet-icon-png-image_3989626.jpg" alt="carteira" />
         </div>
         <div>
           <h3 data-testid="email-field">{email}</h3>

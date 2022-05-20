@@ -1,9 +1,18 @@
 .header {
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   border: solid black 2px;
   display: flex;
   height: 80px;
   width: 100%;
+}
+
+.title {
+  display: flex;
+}
+
+.title img {
+  margin-left: 20px;
+  width: 80px;
 }
 
 .form-wallet {
