@@ -48,6 +48,21 @@
   transition-duration: 0.4s;
 }
 
+.table button {
+  background-color: #d12626;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  padding: 5px 6px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+}
+
 .form-wallet button:hover {
   background-color: #555;
   color: white;
@@ -70,3 +85,4 @@
   padding: 10px;
   text-align: left;
 }
+

@@ -32,7 +32,6 @@ class Wallet extends React.Component {
     const {
       currencies,
       getCurrency,
-      expenses,
     } = this.props;
     const {
       value,
@@ -154,7 +153,6 @@ const mapDispatchToProps = (dispatch) => ({
 Wallet.propTypes = {
   fetchCurr: PropTypes.func.isRequired,
   currencies: PropTypes.arrayOf(PropTypes.any).isRequired,
-  expenses: PropTypes.arrayOf(PropTypes.any).isRequired,
   getCurrency: PropTypes.func.isRequired,
 };
 
