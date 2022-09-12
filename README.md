@@ -2,7 +2,7 @@
 
 - `git clone git@github.com:BrenoBTrindade/Trybe-Wallet.git`
 - Entre na pasta do repositório que você acabou de clonar:
-  - `cd sd-020-b-project-trybewallet`
+  - `cd Trybe-Wallet`
 
 2. Instale as dependências e inicialize o projeto
 
