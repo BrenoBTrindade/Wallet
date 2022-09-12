@@ -1,6 +1,6 @@
 1. Para rodar o projeto clone o repositorio com o comando abaixo.
 
-- `git clone git@github.com:tryber/sd-020-b-project-trybewallet.git`
+- `git clone git@github.com:BrenoBTrindade/Trybe-Wallet.git`
 - Entre na pasta do repositório que você acabou de clonar:
   - `cd sd-020-b-project-trybewallet`
 
