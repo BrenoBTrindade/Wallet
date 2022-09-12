@@ -20,11 +20,19 @@ Visualizar o total de gastos convertidos para uma moeda de escolha;
 
 - `git clone git@github.com:BrenoBTrindade/Trybe-Wallet.git`
 - Entre na pasta do repositório que você acabou de clonar:
-  - `cd Trybe-Wallet`
-
+  ```
+   cd Trybe-Wallet
+  ```
 2. Instale as dependências e inicialize o projeto
 
 - Instale as dependências:
-  - `npm install`
+  ```
+   npm install
+   
+  ``` 
 - Inicialize o projeto:
-  - `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
+  ```
+   npm start 
+   
+  ```
+   (uma nova página deve abrir no seu navegador com um texto simples)
