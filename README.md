@@ -28,11 +28,9 @@ Visualizar o total de gastos convertidos para uma moeda de escolha;
 - Instale as dependências:
   ```
    npm install
-   
   ``` 
 - Inicialize o projeto:
   ```
    npm start 
-   
   ```
-   (uma nova página deve abrir no seu navegador com um texto simples)
+   uma nova página deve abrir no seu navegador!
